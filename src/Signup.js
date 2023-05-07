@@ -18,25 +18,27 @@ function Signup() {
     };
 
    return (
-    <form className='form' onSubmit={handleSignup}>
-      <div>
-        <label htmlFor="username">Username</label>
-        <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-      </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </div>
-       <div>
-        <label htmlFor="password">Confirm Password</label>
-        <input type="password" id="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-      </div>
-      <button type="submit">Sign Up</button>
-      <p>
-        Already have an account?
-        <Link to="/"> Login</Link>
-      </p>
-    </form>
+    <div className="page-center">
+      <form className='form' onSubmit={handleSignup}>
+        <div>
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </div>
+        <div>
+          <label htmlFor="password">Confirm Password</label>
+          <input type="password" id="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+        </div>
+        <button type="submit">Sign Up</button>
+        <p>
+          Already have an account?
+          <Link to="/login"> Login</Link>
+        </p>
+      </form>
+    </div>
   );
 }
 
