@@ -16,6 +16,9 @@ function Login() {
 
   return (
     <div className="page-center">
+      <div className="title title-center">
+        <h2>Login</h2>
+      </div>
       <form className="form" onSubmit={handleLogin}>
         <div>
           <label htmlFor="username">Username</label>

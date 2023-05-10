@@ -19,6 +19,9 @@ function Signup() {
 
    return (
     <div className="page-center">
+      <div className="title title-center">
+        <h2>Sign Up</h2>
+      </div>
       <form className='form' onSubmit={handleSignup}>
         <div>
           <label htmlFor="username">Username</label>

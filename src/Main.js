@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Event from './Event';
+import events from './data';
 
 
 const img = "https://picsum.photos/200/300"
 const title = "Default Title"
 const subtitle = "Default Subtitle"
+const time = "10:10"
+const location = "103, Vikram Tower, Rajendra Place"
 
 const Main = () => {
   return (
@@ -15,10 +18,11 @@ const Main = () => {
             <div className="title">
                 <h2>Likes</h2>
             </div>
-            <Event imageSrc={img} title={title} subtitle={subtitle}/>
-            <Event imageSrc={img} title={title} subtitle={subtitle}/>
-            <Event imageSrc={img} title={title} subtitle={subtitle}/>
-            <Event imageSrc={img} title={title} subtitle={subtitle}/>
+            {events.map((event) =>{
+              return(
+                <Event {...event}/>
+              )
+            })}
         </div>
     </div>
   );
